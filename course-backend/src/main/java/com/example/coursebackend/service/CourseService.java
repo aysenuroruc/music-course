@@ -24,7 +24,7 @@ public class CourseService {
 	TeacherRepository teacherRepository;
 	
 	public Optional<Course> getCourse(String courseId) {
-		Optional<Course> course = courseRepository.findById(courseId); // neden sürekli optional yapmak istiyor? 
+		Optional<Course> course = courseRepository.findById(courseId);
 		return course;
 	}
 	 
