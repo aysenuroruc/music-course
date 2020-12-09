@@ -37,14 +37,13 @@ public class TeacherService {
 	
 	public List<Course> getCourses(String courseId) {
 		return (List<Course>) courseRepository.findAll();
-		// should am i create findAllCorses() method at CourseRepository instead of be cast ?
 	}
 	
-	public Course saveCourse(Course courseId) { // sadece teacher'ýn kurslarýný kaydetmek istemiþtim ya :/
+	public Course saveCourse(Course courseId) {
 		courseRepository.save(entity);
 	}
 	
-	public Optional<Teacher> getCourse(String courseId, String teacherId) { //optional yaptýrdý zorla :/
+	public Optional<Teacher> getCourse(String courseId, String teacherId) {
 		Teacher teacher = getTeacher(teacherId);
 		return teacherRepo.findById(courseId);
 	}
